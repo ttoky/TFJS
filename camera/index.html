@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script src="DIST/p5.min.js"></script>
+  <script src="DIST/p5.dom.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+   <script src="DIST/getUserMedia.min.js"> </script>
+
+       <script>
+      window.addEventListener('error', function(error) {
+        if (ChromeSamples && ChromeSamples.setStatus) {
+          console.error(error);
+          ChromeSamples.setStatus(error.message + ' (Your browser may not support this feature.)');
+          error.preventDefault();
+        }
+      });
+    </script>
+
+
+</head>
+
+<body>
+  <div id="foo"></div>
+<div id="micro_out_div"></div>
+<div id='results'>
+  <div>
+    <video autoplay></video>
+    <button id='getUserMediaButton'>Get User Media</button>
+  </div>
+  <div>
+    <canvas id='grabFrameCanvas'></canvas>
+    <button id='grabFrameButton' disabled>Grab Frame</button>
+  </div>
+  <div>
+    <canvas id='takePhotoCanvas'></canvas>
+    <button id='takePhotoButton' disabled>Take Photo</button>
+  </div>
+</div>
+
+
+<script src="JS/main.js"></script>
+
+
+</body>
+
+</html>
