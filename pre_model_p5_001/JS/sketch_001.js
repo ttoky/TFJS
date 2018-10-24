@@ -1,5 +1,4 @@
 
-//////////////////////////////////////////////////
 
 //---- P5.js ------
 
@@ -8,7 +7,7 @@ var c;
 var myCanvas;
 
 function setup() {
- createCanvas(390, 240);
+  myCanvas = createCanvas(390, 240);
   capture = createCapture(VIDEO);
   capture.size(320, 240);
   //capture.hide();
@@ -24,14 +23,21 @@ function draw() {
 }
 
 function mouseReleased() {
+  var a = capture.loadPixels();
+  var capturedPixels = tf.fromPixels(a.imageData);
 
- //new Promise((resolve, reject) => {
-    const img = capture;
-    console.log(capture);
-    const processedImage = loadAndProcessImage(capture);
-    //img.onload = () => resolve(tf.fromPixels(img));
-    //img.onerror = (err) => reject(err);
-  //});
+
+  loadMobilenet().then(pretrainedModel => {
+
+    const processedImage = loadAndProcessImage(capturedPixels);
+    const prediction = pretrainedModel.predict(processedImage);
+    prediction.print();
+    prediction.as1D().argMax().print();
+    const labelPrediction = prediction.as1D().argMax().dataSync()[0];
+
+});
+
+
 }
 
 
