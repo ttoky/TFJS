@@ -88,11 +88,9 @@ function predict(imgsrc){
 
   });
 });
-
   
 }
 
-//predict("/Users/ttoky/Downloads/myCanvas.jpg");
 
 
 
