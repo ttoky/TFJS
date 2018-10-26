@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+margin:0 auto;
+padding:0;
+}
+
+html{ 
+	width:100%;
+	height:100%;
+	margin:0px;
+  background-color:  #ccffff;
+}
+
+body {
+	width:100%;
+	height:100%;
+  margin:0px;
+	background-color: #ccffff;
+  font-family: 'Nanum Myeongjo', serif;
+  overflow:auto;
+}
+
+  @font-face {
+    font-family: "NanumMyeongjoBold";
+    src:local(※) , url("../Font/NanumMyeongjoBold.ttf")format("truetype");
+
+}
+
+
+.scrollable-content::-webkit-scrollbar * {
+      background:transparent; 
+    }
+
+
+::-webkit-scrollbar
+{
+    width:5px;
+}
+::-webkit-scrollbar-track-piece
+{
+background-coor:transparent;
+}
+
+#topText{
+  text-align:center;
+  padding:20px;
+  width:90%;
+  margin:0 auto;
+  /*font-family: 'Titillium Web', sans-serif;*/
+   font-family: 'Nanum Myeongjo', serif;;
+  /*color :  #99ff33;   line-height: 1.2;*/
+  color:#ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  position:relative;
+}
+
+#footText{
+  padding:10px;
+  width:70%;
+  /*font-family: 'Titillium Web', sans-serif;*/
+   font-family: 'Nanum Myeongjo', serif;;
+  /*color :  #99ff33;   line-height: 1.2;*/
+  color:#005599;
+  font-size: 16px;
+  font-weight: bold;
+  position:relative;
+}
+
+
+
+ #div_main{
+  position:relative;
+   padding:0px;
+   text-align:center;
+}
+
+
+ #head{
+  position:relative;
+   padding:20px;
+   text-align:center;
+}
+
+ #credit{
+  position:relative;
+   padding:20px;
+   font-family: 'Nanum Myeongjo', serif;
+   font-size: 12px;
+   font-weight: bold;
+   text-align:center;
+}
+
+
